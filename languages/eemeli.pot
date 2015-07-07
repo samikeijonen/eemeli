@@ -1,0 +1,61 @@
+# Copyright (C) 2015 Sami Keijonen
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Eemeli 1.0.1\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
+"POT-Creation-Date: 2015-07-07 13:32:16+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.0\n"
+"Language: en_US\n"
+
+#: functions.php:62
+#. Translators: Header image description.
+msgid "Default Header Image"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Eemeli"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://foxland.fi/downloads/toivo"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Eemeli is perfect fit for business, personal or blog sites. It has "
+"beautiful Front Page template where you can show your important content, "
+"testimonials and Callout links. Toivo Lite is an accessible, "
+"translation-ready theme which supports plenty of features like Right to "
+"Left languages and Schema.org microdata."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi"
+msgstr ""
+
+#: functions.php:123
+#. Translators: If there are characters in your language that are not
+#. * supported by Open Sans, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:129
+#. Translators: If there are characters in your language that are not
+#. * supported by Nunito, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Nunito font: on or off"
+msgid "on"
+msgstr ""

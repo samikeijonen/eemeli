@@ -1,0 +1,685 @@
+/**
+Theme Name:  Eemeli
+Theme URI:   https://foxland.fi/downloads/toivo
+Description: Eemeli is perfect fit for business, personal or blog sites. It has beautiful Front Page template where you can show your important content, testimonials and Callout links. Toivo Lite is an accessible, translation-ready theme which supports plenty of features like Right to Left languages and Schema.org microdata.
+Version: 1.0.1
+Author:      Sami Keijonen
+Author URI:  https://foxland.fi
+Text Domain: eemeli
+Domain Path: /languages/
+Tags:        white, green, light, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+License:     GNU General Public License v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:    toivo-lite
+ */
+ 
+/**
+ * Parent theme styles are loaded automatically. So there is no need to use @import rule.
+ */
+
+
+/*--------------------------------------------------------------
+17.0 Child theme friendly zone
+--------------------------------------------------------------*/
+
+/* === 17.1 Font Family === */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title,
+a.more-link,
+a.toivo-button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+body #infinite-handle span button,
+.comment-form input[type="submit"] {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+}
+
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+/* === 17.2 Colors === */
+
+/* Here is a list of used colors to help you out.
+ *
+ * Body color:                              #444
+ * Dark color for text and hover:           #303030
+ * Lighter color for text:                  #555 and #777
+ *
+ * Link color:                              #2d7d5e
+ * Lighter link color:                      #35495d
+ * Link hover color:                        #35495d
+ * Color for text with above backgrounds:   #fff
+ *
+ * Backgroud colors:                        #f6f6f4, #f6f6f4 and #f7f7f7
+ * Borders:                                 #d9e1e7 and #bbb
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #444;
+}
+
+.wp-caption-text,
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+input {
+	color: #555;
+}
+
+::-webkit-input-placeholder {
+	color: #555;
+}
+:-moz-placeholder {
+	color: #555;
+	opacity: 1;
+}
+::-moz-placeholder {
+	color: #555;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: #555;
+}
+
+a,
+a:visited,
+#top-header {
+	color: #2d7d5e; 
+}
+a:hover,
+a:focus,
+a:active,
+button#top-nav-toggle,
+button#social-nav-toggle {
+	color: #35495d; 
+}
+
+.entry-header,
+.entry-header a,
+.entry-footer a,
+.post-navigation .meta-nav,
+.comment-meta,
+.comment-meta a,
+.comment-meta a:visited,
+.comment-meta a:active,
+.comment-navigation .nav-previous:not(:empty) + .nav-next:not(:empty):before,
+.breadcrumb-trail .trail-end,
+.trail-items li::after {
+	color: #777;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.entry-title,
+.entry-title a,
+a.more-link,
+.sidebar .genericon,
+.sidebar .genericon::before,
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus,
+body button#top-nav-toggle:hover,
+body button#top-nav-toggle:active,
+body button#top-nav-toggle:focus,
+body button#social-nav-toggle:hover,
+body button#social-nav-toggle:active,
+body button#social-nav-toggle:focus {
+	color: #303030;
+}
+
+.breadcrumb-trail a,
+.breadcrumb-trail a:visited,
+.widget a,
+.widget a:visited {
+	color: #35495d;
+}
+.breadcrumb-trail a:hover,
+.breadcrumb-trail a:focus,
+.breadcrumb-trail a:active,
+.widget a:hover,
+.widget a:focus,
+.widget a:active,
+#sidebar-subsidiary,
+#sidebar-subsidiary .widget-title,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.entry a.portfolio-item-link,
+body #infinite-handle span,
+.site-info a,
+.site-info a:visited,
+.site-info a:hover,
+.site-info a:focus,
+.site-info a:active {
+	color: #303030;
+}
+
+.toivo-callout,
+.toivo-callout .entry-title,
+a.toivo-button,
+.pagination .prev,
+.pagination .next,
+button#top-nav-toggle:before,
+button#social-nav-toggle:before {
+	color: #fff;
+}
+
+body .search-submit {
+	color: #303030;
+}
+body .search-submit:hover,
+body .search-submit:focus,
+body .search-submit:active {
+	color: #fff;
+	border-color: #303030;
+}
+
+/* == Menu colors and backgrounds == */
+
+#menu-primary li:hover > a,
+#menu-primary li.focus > a,
+button#nav-toggle:hover,
+button#nav-toggle:focus,
+button#nav-toggle.focus,
+#menu-primary li.current-menu-item,
+#menu-primary li.current-menu-item > a,
+#menu-primary ul ul a:hover,
+#menu-primary ul ul li.focus > a {
+	background-color: #f6f6f4;
+	color: #303030;
+}
+
+#menu-primary .menu-item-description {
+	color: #777;
+}
+
+@media screen and (max-width: 999px) {
+
+	.main-navigation li a,
+	button#nav-toggle {
+		background: #fff;
+		border-bottom: 1px solid #d9e1e7;
+		color: #2d7d5e;
+	}
+	button#nav-toggle.active {
+		border-bottom: 1px solid #d9e1e7;
+	}
+	
+	.dropdown-toggle {
+		background-color: transparent;
+		border: none;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		color: #777;
+	}
+	.dropdown-toggle:hover,
+	.dropdown-toggle:active,
+	.dropdown-toggle:focus {
+		background-color: #35495d;
+	}
+	.dropdown-toggle:focus {
+		outline: 0;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+	#menu-primary a {
+		color: #2d7d5e;
+	}
+
+	#menu-primary ul ul {
+		background-color: #fff;
+		border: 1px solid #d9e1e7;
+	}
+
+	#menu-primary ul ul a {
+		border-bottom: 1px solid #d9e1e7;
+	}
+	
+	#menu-primary .menu-item-description.top-depth {
+		background: rgba(0,0,0,0.7);
+		color: #fff;
+	}
+	.main-navigation .menu-item-description.top-depth:after {
+		border-top-color: rgba(0, 0, 0, 0.7);
+	}
+
+}
+
+/* Top and social menu. */
+
+.top-navigation li:hover a,
+.top-navigation li:focus a,
+.top-navigation li:active a,
+.top-navigation li.focus a,
+.top-navigation li.current-menu-item a {
+	color: #303030;
+}
+#menu-social li a::before {
+	color: #bbb;
+}
+
+@media screen and (max-width: 1199px) {
+
+	.top-navigation li a,
+	.social-navigation {
+		border-bottom: 1px solid #d9e1e7;
+	}
+	.top-navigation li:first-child a,
+	.social-navigation.opened {
+		border-top: 1px solid #d9e1e7;
+	}
+	.top-navigation.opened + .social-navigation.opened {
+		border-top: none;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	.top-navigation li:hover a,
+	.top-navigation li:focus a,
+	.top-navigation li:active a,
+	.top-navigation li.focus a,
+	.top-navigation li.current-menu-item a {
+		border-bottom: 6px solid #bbb;
+	}
+	
+}
+
+/* === 17.3 Backgrounds === */
+
+/* Set default background color just in case. */
+body {
+	background: #eef2f5;
+}
+
+.site-header,
+body .mejs-container,
+body .mejs-embed,
+body .mejs-embed body,
+body .mejs-container .mejs-controls  {
+	background-color: rgba(59,86,103,0.90);
+}
+.custom-header-image .site-header {
+	background-color: transparent;
+}
+.custom-header-image .site-header > .wrap::before {
+	background-color: rgba(59,86,103,0.70);
+}
+
+pre {
+	background-color: #f7f7f7;
+	background-image: -webkit-gradient(linear,0 0,0 100%,color-stop(.5,rgba(255,255,255,.5)),color-stop(.5,transparent),to(transparent));
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: -moz-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: -o-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+}
+
+mark,
+ins {
+	background: #fff9c0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.entry a.portfolio-item-link,
+body #infinite-handle span {
+	background: transparent;
+}
+
+button#top-nav-toggle,
+button#social-nav-toggle,
+.pagination .prev,
+.pagination .next,
+.entry-header .entry-title:after,
+.front-page-area > .entry-title:after  {
+	background: #35495d;
+}
+
+body .search-submit,
+tbody tr:nth-child(2n+1) > td,
+tbody tr:nth-child(2n+1) > th {
+	background: #fafafa;
+}
+
+a.more-link:hover,
+a.more-link:focus,
+a.more-link:active,
+button:hover,
+button#top-nav-toggle:hover,
+button#social-nav-toggle:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.entry a.portfolio-item-link:hover,
+button:focus,
+button#top-nav-toggle:focus,
+button#social-nav-toggle:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.entry a.portfolio-item-link:focus,
+button:active,
+button#top-nav-toggle:active,
+button#social-nav-toggle:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.entry a.portfolio-item-link:active,
+body #infinite-handle span:hover,
+body #infinite-handle span:focus,
+body #infinite-handle span:active,
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .prev:focus,
+.pagination .next:focus,
+.pagination .prev:active,
+.pagination .next:active {
+	background: #303030;
+	color: #fff;
+}
+
+a.toivo-button:hover,
+a.toivo-button:focus,
+a.toivo-button:active {
+	background: #fff;
+	color: #35495d;
+}
+
+#top-header,
+hr,
+#menu-portfolio ul li a,
+li.bypostauthor,
+.sticky.entry,
+.page-links a,
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus,
+body .gform_confirmation_wrapper,
+.toivo-callout .toivo-callout-title.entry-title:after {
+	background: #f6f6f4;
+}
+
+#menu-primary,
+.entry,
+#comments,
+.layout-1c #sidebar-primary,
+#sidebar-subsidiary,
+#sidebar-front-page,
+.post-navigation,
+.pagination {
+	background-color: #fff;
+}
+
+@media screen and (max-width: 999px) {
+	
+	#sidebar-primary {
+		background: #fff;	
+	}
+
+}
+
+.site-footer,
+.format-audio .entry-media,
+.featured-area,
+.child-pages-area {
+	background: #aebec8;
+}
+.page-template-blog-page .format-audio .entry-media {
+	background: #d9e1e7;
+}
+.toivo-callout {
+	background: #35495d;
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #bbb;
+}
+
+/* === 17.4 Borders === */
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #555;
+}
+
+th,
+td {
+	border-bottom: 1px solid #d9e1e7;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	border: 1px solid #d9e1e7;
+}
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+	border-color: #2d7d5e;
+}
+
+blockquote {
+	border-left-width: 4px;
+	border-left-style: solid;
+	border-color: #d9e1e7;
+}
+
+fieldset,
+legend,
+#menu-social li a,
+body .search-field {
+	border: 1px solid #d9e1e7;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.more-link,
+body #infinite-handle span {
+	border: 2px solid #303030;
+}
+body .search-submit {
+	border-left: 1px solid #d9e1e7;
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+}
+
+.entry,
+.site-header,
+#menu-primary,
+.layout-1c #sidebar-primary,
+.post-navigation .nav-previous,
+#comments,
+.sidebar ul li,
+.error-404.not-found ul li,
+.post-navigation,
+.comments-title,
+.comment-navigation-top,
+.pagination {
+	border-bottom: 1px solid #d9e1e7;
+}
+
+.sidebar ul ul li:first-child,
+.error-404.not-found ul ul li:first-child {
+	border-top: 1px solid #d9e1e7;
+}
+.sidebar ul li:last-child,
+.error-404.not-found ul li:last-child {
+	border-bottom: none;
+}
+
+.comment-navigation-bottom,
+#respond {
+	border-top: 1px solid #d9e1e7;
+}
+
+#top-header {
+	border-bottom: 6px solid #fff;
+}
+
+.site-logo,
+.site-header .avatar {
+	border: 6px solid #fff;
+}
+.site-title a,
+a.toivo-button {
+	border: 4px solid #fff;
+	border-radius: 4px;
+}
+
+@media screen and (max-width: 999px) {
+
+	.layout-2c-l #sidebar-primary,
+	.layout-2c-r #sidebar-primary {
+		border-bottom: 1px solid #d9e1e7;
+	}
+	
+	.pagination .nav-previous {
+		border-bottom: 1px solid #d9e1e7;
+	}
+
+}
+
+.comment-list > li {
+	border-bottom: 2px solid #d9e1e7;
+}
+.comment-list > li:last-child {
+	border-bottom: none;
+}
+
+.widget-title,
+.widgettitle {
+	border-bottom: 2px solid #2d7d5e;
+}
+
+@media screen and (min-width: 800px) {
+
+	#sidebar-subsidiary .widget:nth-child(2n+1),
+	#sidebar-front-page .widget:nth-child(2n+1),
+	#sidebar-page-template .widget:nth-child(2n+1),
+	#testimonial-area .entry-testimonial:nth-child(2n+1) {
+		border-right-width: 1px;
+		border-right-style: dashed;
+		border-color: #d9e1e7;
+	}
+	
+	#sidebar-subsidiary .widget:nth-child(n+3),
+	#sidebar-front-page .widget:nth-child(n+3),
+	#sidebar-page-template .widget:nth-child(n+3),
+	#testimonial-area .entry-testimonial:nth-child(n+3) {
+		border-top: 1px dashed #d9e1e7;
+	}
+
+}
+
+/* Styles specific for this theme. */
+
+.entry,
+#comments,
+.testimonial-wrapper {
+	border-bottom: none;
+	border-radius: 3px;
+	box-shadow: 0 2px 0 #d9e1e7;
+}
+
+.featured-area-grid > .entry {
+	box-shadow: 0 2px 0 #8d9ba3;
+}
+
+.testimonial-wrapper {
+	background: #fff;
+	padding: 1em 3%;
+}
+
+.entry-terms::before {
+	bottom: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+
+	.top-navigation li:hover a,
+	.top-navigation li:focus a,
+	.top-navigation li:active a,
+	.top-navigation li.focus a,
+	.top-navigation li.current-menu-item a {
+		border-bottom-width: 7px;
+	}
+
+}
