@@ -4,19 +4,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Toivo Lite Example 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
-"POT-Creation-Date: 2015-05-14 06:56:57+00:00\n"
-"PO-Revision-Date: 2015-06-05 10:57+0200\n"
+"POT-Creation-Date: 2015-07-07 18:48+0300\n"
+"PO-Revision-Date: 2015-07-07 18:49+0300\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: \n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. Translators: Header image description.
+#: functions.php:62
+msgid "Default Header Image"
+msgstr "Oletus otsakekuva"
+
 #. Theme Name of the plugin/theme
-msgid "Toivo Lite Green"
+msgid "Eemeli"
 msgstr ""
 
 #. Theme URI of the plugin/theme
@@ -25,17 +30,17 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Toivo Lite Green is perfect fit for business, personal or blog sites. It has "
-"beautiful Front Page template where you can show your important content, "
-"testimonials and Callout links. Toivo Lite is an accessible, translation-"
-"ready theme which supports plenty of features like Right to Left languages "
-"and Schema.org microdata."
+"Eemeli is perfect fit for business, personal or blog sites. It has beautiful "
+"Front Page template where you can show your important content, testimonials "
+"and Callout links. Toivo Lite is an accessible, translation-ready theme "
+"which supports plenty of features like Right to Left languages and Schema."
+"org microdata."
 msgstr ""
-"Toivo \"Lite\" Green on täydellinen teema sivuillesi oli se sitten "
-"yrityssivu tai henkilökohtainen blogi. Teemassa on upea Etusivu, jossa voit "
-"näyttää tärkeimmän sisällön, portfolion, suositukset ja Callout-linkkejä. "
-"Toivo on saanut virallisen saavutettavuus (Accessibility Ready) merkinnän ja "
-"siinä on paljon ominaisuuksia kuten logon lataaminen ja tuki Schema.org "
+"Eemeli on täydellinen teema sivuillesi oli se sitten yrityssivu tai "
+"henkilökohtainen blogi. Teemassa on upea Etusivu, jossa voit näyttää "
+"tärkeimmän sisällön, portfolion, suositukset ja Callout-linkkejä. Toivo on "
+"saanut virallisen saavutettavuus (Accessibility Ready) merkinnän ja siinä on "
+"paljon ominaisuuksia kuten logon lataaminen ja tuki Schema.org "
 "merkkauskielelle."
 
 #. Author of the plugin/theme
@@ -49,7 +54,7 @@ msgstr ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Open Sans, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:113
+#: functions.php:123
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
@@ -57,7 +62,7 @@ msgstr ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Nunito, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:119
+#: functions.php:129
 msgctxt "Nunito font: on or off"
 msgid "on"
 msgstr ""
