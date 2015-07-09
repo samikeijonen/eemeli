@@ -107,7 +107,8 @@ grunt.initConfig({
 
     // Clean up build directory
     clean: {
-      main: ['build/<%= pkg.name %>']
+      main: ['build/<%= pkg.name %>'],
+	  mainPro: ['buildpro/<%= pkg.name %>']
     },
 
     // Copy the theme into the build directory
@@ -117,6 +118,7 @@ grunt.initConfig({
           '**',
           '!node_modules/**',
           '!build/**',
+		  '!buildpro/**',
           '!.git/**',
           '!Gruntfile.js',
           '!package.json',
@@ -129,6 +131,25 @@ grunt.initConfig({
 		  '!style-rtl.css'
         ],
         dest: 'build/<%= pkg.name %>/'
+      },
+      mainPro: {
+        src:  [
+          '**',
+          '!node_modules/**',
+          '!build/**',
+		  '!buildpro/**',
+          '!.git/**',
+          '!Gruntfile.js',
+          '!package.json',
+          '!.gitignore',
+          '!.gitmodules',
+          '!.tx/**',
+          '!**/Gruntfile.js',
+          '!**/package.json',
+          '!**/*~',
+		  '!style-rtl.css'
+        ],
+        dest: 'buildpro/<%= pkg.name %>/'
       }
     },
 	
@@ -153,7 +174,18 @@ grunt.initConfig({
 				from: /^define\( 'EEMELI_VERSION'.*$/m,
 				to: 'define( \'EEMELI_VERSION\', \'<%= pkg.version %>\' );'
 			} ]
+		},
+		templateProVersion: {
+			src: [
+				'buildpro/<%= pkg.name %>/style.css',
+			],
+			overwrite: true,
+			replacements: [ {
+				from: /^.*Template:.*$/m,
+				to: 'Template: toivo'
+			} ]
 		}
+		
 	},
 
     // Compress build directory into <name>.zip and <name>-<version>.zip
@@ -167,6 +199,16 @@ grunt.initConfig({
         cwd: 'build/<%= pkg.name %>/',
         src: ['**/*'],
         dest: '<%= pkg.name %>/'
+      },
+      mainPro: {
+        options: {
+          mode: 'zip',
+          archive: './buildpro/<%= pkg.name %>_v<%= pkg.version %>.zip'
+        },
+        expand: true,
+        cwd: 'buildpro/<%= pkg.name %>/',
+        src: ['**/*'],
+        dest: '<%= pkg.name %>/'
       }
     },
 
@@ -176,6 +218,6 @@ grunt.initConfig({
 grunt.registerTask( 'default', [ 'makepot' ] );
 
 // Build task(s).
-grunt.registerTask( 'build', [ 'clean', 'replace:styleVersion', 'copy', 'compress' ] );
+grunt.registerTask( 'build', [ 'clean', 'replace:styleVersion', 'copy', 'replace:templateProVersion', 'compress' ] );
 
 };
