@@ -108,7 +108,7 @@ grunt.initConfig({
     // Clean up build directory
     clean: {
       main: ['build/<%= pkg.name %>'],
-	  mainPro: ['buildpro/<%= pkg.name %>']
+	  mainPro: ['buildpro/<%= pkg.namePro %>']
     },
 
     // Copy the theme into the build directory
@@ -149,7 +149,7 @@ grunt.initConfig({
           '!**/*~',
 		  '!style-rtl.css'
         ],
-        dest: 'buildpro/<%= pkg.name %>/'
+        dest: 'buildpro/<%= pkg.namePro %>/'
       }
     },
 	
@@ -177,14 +177,24 @@ grunt.initConfig({
 		},
 		templateProVersion: {
 			src: [
-				'buildpro/<%= pkg.name %>/style.css',
+				'buildpro/<%= pkg.namePro %>/style.css',
 			],
 			overwrite: true,
 			replacements: [ {
 				from: /^.*Template:.*$/m,
 				to: 'Template: toivo'
 			} ]
-		}
+		},
+		themeName: {
+			src: [
+				'buildpro/<%= pkg.namePro %>/style.css',
+			],
+			overwrite: true,
+			replacements: [ {
+				from: /^.*Theme Name:.*$/m,
+				to: 'Theme Name: Eemeli Pro'
+			} ]
+		},
 		
 	},
 
@@ -203,7 +213,7 @@ grunt.initConfig({
       mainPro: {
         options: {
           mode: 'zip',
-          archive: './buildpro/<%= pkg.name %>_v<%= pkg.version %>.zip'
+          archive: './buildpro/<%= pkg.namePro %>_v<%= pkg.version %>.zip'
         },
         expand: true,
         cwd: 'buildpro/<%= pkg.name %>/',
@@ -218,6 +228,6 @@ grunt.initConfig({
 grunt.registerTask( 'default', [ 'makepot' ] );
 
 // Build task(s).
-grunt.registerTask( 'build', [ 'clean', 'replace:styleVersion', 'copy', 'replace:templateProVersion', 'compress' ] );
+grunt.registerTask( 'build', [ 'clean', 'replace:styleVersion', 'copy', 'replace:templateProVersion', 'replace:themeName', 'compress' ] );
 
 };

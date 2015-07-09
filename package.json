@@ -1,5 +1,6 @@
 {
   "name": "eemeli",
+  "namePro": "eemeli-pro",
   "version": "1.0.1",
   "private": true,
   "devDependencies": {
