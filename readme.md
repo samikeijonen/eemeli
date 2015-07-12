@@ -19,6 +19,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.2 July 12, 2015
+
+* Change default header background color darker so it passes accessibility check.
+
 ### Version 1.0.1 July 7, 2015
 
 * Use https for loading Google fonts.
