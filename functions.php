@@ -92,7 +92,7 @@ add_action( 'wp_enqueue_scripts', 'eemeli_scripts', 11 );
  * @since  1.0.0
  */
 function eemeli_header_background_color() {
-	return '#f8f8f4';
+	return '#35495d';
 }
 add_filter( 'toivo_lite_default_bg_color', 'eemeli_header_background_color' );
 
@@ -102,7 +102,7 @@ add_filter( 'toivo_lite_default_bg_color', 'eemeli_header_background_color' );
  * @since  1.0.0
  */
 function eemeli_header_bg_color_opacity() {
-	return 10;
+	return 80;
 }
 add_filter( 'toivo_lite_default_bg_opacity', 'eemeli_header_bg_color_opacity' );
 
